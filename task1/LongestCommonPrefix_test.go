@@ -10,3 +10,11 @@ func TestLongestCommonPrefix(t *testing.T) {
 		t.Errorf("getLongestCommonPrefix fail")
 	}
 }
+
+func TestNoneCommonPrefix(t *testing.T) {
+	arr := []string{"dog", "racecar", "car"}
+	res := getLongestCommonPrefix(arr)
+	if res != "" {
+		t.Errorf("This string doesn't have common prefix")
+	}
+}
